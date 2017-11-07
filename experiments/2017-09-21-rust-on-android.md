@@ -206,9 +206,9 @@ mkdir jniLibs/arm64
 mkdir jniLibs/armeabi
 mkdir jniLibs/x86
 
-ln -s <path>/cargo/target/aarch64-linux-android/release/libgreetings.so jniLibs/arm64/libgreetings.so
-ln -s <path>/cargo/target/armv7-linux-androideabi/release/libgreetings.so jniLibs/armeabi/libgreetings.so
-ln -s <path>/cargo/target/i686-linux-android/release/libgreetings.so jniLibs/x86/libgreetings.so
+ln -s <project_path>/greetings/cargo/target/aarch64-linux-android/release/libgreetings.so jniLibs/arm64/libgreetings.so
+ln -s <project_path>/greetings/cargo/target/armv7-linux-androideabi/release/libgreetings.so jniLibs/armeabi/libgreetings.so
+ln -s <project_path>/greetings/cargo/target/i686-linux-android/release/libgreetings.so jniLibs/x86/libgreetings.so
 ```
 
 Now, head back to Android Studio and open `GreetingsActivity.java`. We need to load our Rust library when the app starts, so add the following lines below the class declaration and before the `onCreate` method.
